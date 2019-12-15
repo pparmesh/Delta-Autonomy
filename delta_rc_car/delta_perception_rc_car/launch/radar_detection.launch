@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- Static transform from world to base_radar_link for visualization using Rviz -->
+    <node
+        pkg="tf"
+        type="static_transform_publisher"
+        name="static_rc_car_to_radar"
+        args="0 0 0 0 1.5708 -1.5708 rc_car ti_mmwave 100" />
+
+    <node
+        pkg="tf"
+        type="static_transform_publisher"
+        name="static_tf_radar_to_pcl"
+        args="0 0 0 0 0 0 ti_mmwave ti_mmwave/point_cloud 100" /> 
+
+    <!-- Run the object detection node -->
+    <node
+        pkg="delta_perception_rc_car"
+        type="radar_detection_node.py"
+        name="radar_detection"
+        output="screen" />
+
+</launch>

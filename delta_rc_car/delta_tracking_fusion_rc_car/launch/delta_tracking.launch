@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- Play rosbag record -->
+    <include file="$(find delta_perception_rc_car)/launch/play_rosbag.launch">
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/test/static_test_01_tf.bag" /> -->
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/test/static_test_02_tf.bag" /> -->
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/test/dynamic_test_01.bag" /> -->
+
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-38-42.bag" /> -->
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-40-02.bag" /> -->
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-40-48.bag" /> -->
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-41-05.bag" /> -->
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-41-34.bag" /> -->
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-42-16.bag" /> -->
+        <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-42-39.bag" />
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-44-02.bag" /> -->
+        <!-- <arg name="filename" value="$(find delta_optitrack)/bags/static/converted/2019-11-02-17-44-50.bag" /> -->
+    </include>
+
+    <param name ="/use_sim_time" value="true"/>
+
+    <!-- Run the perception pipeline -->
+    <!-- <include file="$(find delta_perception_rc_car)/launch/object_detection.launch" /> -->
+
+    <!-- <node
+        pkg="tf"
+        type="static_transform_publisher"
+        name="static_map_to_rc_car"
+        args="0 0 0 0 0 0 map rc_car 100" /> -->
+
+    <node
+        pkg="tf"
+        type="static_transform_publisher"
+        name="static_rc_car_to_rviz"
+        args="0 0 0 0 1.5708 -1.5708 rc_car rviz 100" />
+
+    <node
+        pkg="delta_perception_rc_car"
+        type="main.py"
+        name="object_detection"
+        output="screen" />
+
+    <include file="$(find delta_perception_rc_car)/launch/radar_detection.launch" />
+
+    <node
+        pkg="delta_tracking_fusion_rc_car"
+        type="main.py"
+        name="tracking_fusion"
+        output="screen" />
+
+    <node
+        pkg="delta_optitrack"
+        type="validation_node.py"
+        name="optitrack_validation"
+        output="screen" />
+
+    <node
+        type="rviz" name="rviz" pkg="rviz" args="-d $(find delta_tracking_fusion_rc_car)/tracking_fusion.rviz">
+        <!-- type="rviz" name="rviz" pkg="rviz" args="-d $(find delta_optitrack)/optitrack.rviz"> -->
+    </node>
+
+</launch>

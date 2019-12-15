@@ -1,0 +1,5 @@
+classes = 2
+train = data/train.txt
+valid = data/val.txt
+names = /mnt/data/Workspaces/rc_car_workspace/src/delta_rc_car/delta_perception_rc_car/darknet/data/rc-car.names
+backup = backup/

@@ -1,0 +1,219 @@
+# Wiki links. These show up in the sidebar in the order they appear here.
+wiki:
+  - title: Overview
+    children:
+      - title: Home
+        url: /
+      - title: About
+        url: /about/
+      - title: Wiki Index
+        url: /wiki/
+      - title: Contribute
+        url: /docs/
+  - title: System Design & Development
+    url: /wiki/system-design-development/
+    children:
+      - title: System Engineering
+        url: /wiki/system-design-development/system-engineering/
+      - title: Mechanical Design
+        url: /wiki/system-design-development/mechanical-design/
+      - title: Printed Circuit Board Design
+        url: /wiki/system-design-development/pcb-design/
+      - title: Cable Management
+        url: /wiki/system-design-development/cable-management/
+      - title: Subsystem Interface Modeling
+        url: /wiki/system-design-development/subsystem-interface-modeling/
+  - title: Project Management
+    url: /wiki/project-management/
+    children:
+      - title: Product Development in Complex Systems
+        url: /wiki/project-management/product-development-complex-systems/
+      - title: Risk Management
+        url: /wiki/project-management/risk-management/
+  - title: Common Platforms
+    url: /wiki/common-platforms/
+    children:
+      - title: DJI SDK
+        url: /wiki/common-platforms/dji-sdk/
+      - title: Pixhawk
+        url: /wiki/common-platforms/pixhawk/
+      - title: ROS Introduction
+        url: /wiki/common-platforms/ros-intro/
+      - title: Asctec Pelican UAV Setup Guide
+        url: /wiki/common-platforms/asctec-uav-setup-guide/
+      - title: Husky Interfacing Procedure
+        url: /wiki/common-platforms/husky_interfacing_and_communication/
+      - title: ROS Motion Server Framework
+        url: /wiki/common-platforms/ros-motion-server-framework/
+  - title: Sensing
+    url: /wiki/sensing/
+    children:
+      - title: Adafruit GPS
+        url: /wiki/sensing/adafruit-gps/
+      - title: AprilTags
+        url: /wiki/sensing/apriltags/
+      - title: Camera Calibration
+        url: /wiki/sensing/camera-calibration/
+      - title: Computer Vision Consideration
+        url: /wiki/sensing/computer-vision-considerations/
+      - title: Delphi ESR Radar
+        url: /wiki/sensing/delphi-esr-radar/
+      - title: Microsoft Kinect and Point Cloud Library
+        url: /wiki/sensing/kinect-pcl/
+      - title: Photometric Calibration
+        url: /wiki/sensing/photometric-calibration/
+      - title: Speech Recognition
+        url: /wiki/sensing/speech-recognition/
+      - title: Stereo Vision in OpenCV
+        url: /wiki/sensing/opencv-stereo/
+      - title: Camera-IMU Calibration using kalibr
+        url: /wiki/sensing/camera-imu-calibration/
+  - title: Actuation
+    url: /wiki/actuation/
+    children:
+      - title: Motor Controller Feedback
+        url: /wiki/actuation/motor-controller-feedback/
+      - title: PID Control on Arduino
+        url: /wiki/actuation/pid-control-arduino/
+      - title: Linear Actuator Types
+        url: /wiki/actuation/linear-actuator-resources/
+      - title: ULN2003A Motor Controller
+        url: /wiki/actuation/uln2003a-motor-controller/
+      - title: Vedder Electronic Speed Controller
+        url: /wiki/actuation/vedder-electronic-speed-controller/
+  - title: State Estimation
+    url: /wiki/state-estimation/
+    children:
+      - title: Adaptive Monte Carlo Localization
+        url: /wiki/state-estimation/adaptive-monte-carlo-localization/
+      - title: Sensor Fusion and Tracking
+        url: /wiki/state-estimation/radar-camera-sensor-fusion/
+      - title: ROS Cost Maps
+        url: /wiki/state-estimation/ros-cost-maps/
+      - title: ROS Mapping and Localization
+        url: /wiki/state-estimation/ros-mapping-localization/
+      - title: ROS Navigation
+        url: /wiki/state-estimation/ros-navigation/
+      - title: SBPL Lattice Planner
+        url: /wiki/state-estimation/sbpl-lattice-planner/
+      - title: ORB SLAM2 Setup Guidance
+        url: /wiki/state-estimation/orb-slam2-setup/
+  - title: Programming
+    url:  /wiki/programming/
+    children:
+      - title: Boost Library
+        url: /wiki/programming/boost-library/
+      - title: Boost Maps and Vectors
+        url: /wiki/programming/boost-maps-vectors/
+      - title: Cmake
+        url: /wiki/programming/cmake/
+      - title: Eigen Library
+        url: /wiki/programming/eigen-library/
+      - title: Git
+        url: /wiki/programming/git/
+      - title: Programming Interviews
+        url: /wiki/programming/google-programming-interviews/
+      - title: Multithreaded Programming
+        url: /wiki/programming/multithreaded-programming/
+      - title: Programming Tutorials and Resources
+        url: /wiki/programming/tutorials-resources/
+      - title: Python Construct
+        url: /wiki/programming/python-construct/
+  - title: Networking
+    url: /wiki/networking/
+    children:
+      - title: Bluetooth Sockets
+        url: /wiki/networking/bluetooth-sockets/
+      - title: Xbee Pro DigiMesh 900
+        url: /wiki/networking/xbee-pro-digimesh-900/
+      - title: ROCON Multi-Master Framework
+        url: /wiki/networking/rocon-multi-master/
+      - title: ROS over Multiple Machines
+        url: /wiki/networking/ros-distributed/
+  - title: Interfacing
+    url: /wiki/interfacing/
+    children:
+      - title: Myo
+        url: /wiki/interfacing/myo/
+      - title: Blink(1) LED
+        url: /wiki/interfacing/blink-1-led/
+  - title: Computing
+    url: /wiki/computing/
+    children:
+      - title: Adruino
+        url: /wiki/computing/arduino/
+      - title: Single Board Computers
+        url: /wiki/computing/single-board-computers/
+      - title: Upgrading Ubuntu Kernels
+        url: /wiki/computing/upgrading-ubuntu-kenel/
+      - title: Ubuntu 14.04 on Chromebook
+        url: /wiki/computing/ubuntu-chromebook/
+      - title: Setup your GPU System for Computer Vision
+        url: /wiki/computing/setup-gpus-for-computer-vision/
+  - title: Fabrication
+    url: /wiki/fabrication/
+    children:
+      - title: Fabrication Considerations for 3D printing
+        url: /wiki/fabrication/fabrication_considerations_for_3D_printing/
+      - title: Machining & Prototyping
+        url: /wiki/fabrication/machining-prototyping/
+      - title: Rapid Prototyping
+        url: /wiki/fabrication/rapid-prototyping/
+      - title: Turning Process
+        url: /wiki/fabrication/turning-process/
+      - title: Milling Process
+        url: /wiki/fabrication/milling-process/
+      - title: Soldering
+        url: /wiki/fabrication/soldering/
+      - title: 3D Printers
+        url: /wiki/fabrication/3d-printers/
+      - title: MakerBot Replicator 2x
+        url: /wiki/fabrication/makerbot-replicator-2x/
+      - title: CubePro
+        url: /wiki/fabrication/cube-pro/
+      - title: Series A Pro Printer
+        url: /wiki/fabrication/series-A-pro/
+  - title: Math
+  - title: Tools
+    url: /wiki/tools/
+    children:
+      - title: Docker
+        url: /wiki/tools/docker/
+      - title: Vim
+        url: /wiki/tools/vim/
+      - title: Altium Circuitmaker
+        url: /wiki/tools/altium-circuitmaker/
+      - title: SolidWorks
+        url: /wiki/tools/solidworks/
+      - title: TMUX
+        url: /wiki/tools/tmux/
+      - title: udev Rules
+        url: /wiki/tools/udev-rules/
+      - title: Rosbags in Matlab
+        url: /wiki/tools/rosbags-matlab/
+
+# Main links appear in the header.
+main:
+  - title: Wiki
+    url: /wiki/
+  - title: About
+    url: /about/
+  - title: Contribute
+    url: /docs/
+
+# Navigation for supporting documentation.
+docs:
+  - title: Overview
+    children:
+      - title: Home
+        url: /
+      - title: About
+        url: /about/
+      - title: Wiki Index
+        url: /wiki/
+      - title: Contribute
+        url: /docs/
+  - title: Contribute
+    children:
+      - title: Introduction
+        url: /docs/

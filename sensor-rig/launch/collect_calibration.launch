@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find pointgrey_camera_driver)/launch/camera.launch"/>
+	<include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+	<node pkg="rosbag" type="record" name="rosbag_cam_lidar" args="-o /home/karmesh/dataset/ /pt_grey/image_color_rect /pt_grey/camera_info /velodyne_points" />
+</launch>

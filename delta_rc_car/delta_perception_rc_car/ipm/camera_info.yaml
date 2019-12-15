@@ -1,0 +1,34 @@
+# Dataset parameters
+height: 720
+width: 1280
+
+# Extrinsic parameters
+extrinsics:
+    # XYZ (m)
+    position: [2.2, 0.0, 2.5]
+    # Roll Pitch Yaw (degrees)
+    rpy: [0.0, -20.0, 0.0]
+
+# Intrinsic parameters
+intrinsics:
+    D: [0.0, 0.0, 0.0, 0.0, 0.0]
+    K: [640.0000000000001, 0.0, 640.0, 0.0, 640.0000000000001, 360.0, 0.0, 0.0, 1.0]
+    R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+    P: [640.0000000000001, 0.0, 640.0, 0.0, 0.0, 640.0000000000001, 360.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+    distortion_model: "plumb_bob"
+    binning_x: 0
+    binning_y: 0
+    roi:
+        x_offset: 0
+        y_offset: 0
+        height: 0
+        width: 0
+        do_rectify: False
+
+# IPM calibration parameters
+calibration:
+    ipm_matrix: [-0.0027332192808029914, 2.9685185428870566e-05, 1.0236081803468617, 0.0001416293938502938, -0.0006243639393395322, -1.5991239001137227, 0.0005176917631930257, -0.015422663817366695, 1.0]
+    ipm_image_dims: [870, 225]
+    ipm_px_to_m: 0.07272727272727274
+    ipm_m_to_px: 13.75
+    calibration_ego_y: -3.946949

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- Run the prediction pipeline -->
+    <node   
+        pkg="delta_prediction"
+        type="ego_trajectory_subscriber.py"
+        name="ego_trajectory_subscriber"
+        output="screen">
+    </node>
+
+</launch>

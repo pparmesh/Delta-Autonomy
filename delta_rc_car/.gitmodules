@@ -1,0 +1,3 @@
+[submodule "delta_msgs"]
+	path = delta_msgs
+	url = https://github.com/deltaautonomy/delta_msgs

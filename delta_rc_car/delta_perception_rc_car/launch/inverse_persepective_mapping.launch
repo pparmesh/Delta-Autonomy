@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- Launch pointgrey camera -->
+    <include file="$(find pointgrey_camera_driver)/launch/camera.launch">
+        <arg name="camera_serial" value="16306167" />
+    </include>
+
+    <!-- Run the inverse perspective mapping node -->
+    <node
+        pkg="delta_perception_rc_car"
+        type="ipm_node.py"
+        name="ipm_node"
+        output="screen">
+    </node>
+
+    <!-- Display IPM image -->
+    <node
+        name="image_view_ipm"
+        pkg="image_view"
+        type="image_view"
+        respawn="false"
+        output="screen">
+        <remap from="image" to="/delta/perception_rc_car/ipm/image" />
+    </node>
+</launch>
